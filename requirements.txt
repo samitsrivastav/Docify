@@ -1,0 +1,16 @@
+# Force the small CPU-only PyTorch build (the default PyPI wheel bundles CUDA
+# libraries that are unused and much larger — this matters a lot on free-tier
+# hosting like Streamlit Community Cloud).
+--index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://pypi.org/simple/
+
+streamlit>=1.38
+pymupdf>=1.24
+python-pptx>=1.0
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+transformers>=4.42
+torch>=2.2
+requests>=2.31
+python-dotenv>=1.0
+numpy>=1.26
